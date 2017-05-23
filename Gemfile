@@ -14,6 +14,9 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'devise'
+gem 'semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git'
+gem "font-awesome-rails"
+
 # gem 'redis', '~> 3.0'
 # gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development

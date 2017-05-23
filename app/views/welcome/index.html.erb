@@ -1,2 +1,7 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<% if user_signed_in? %>
+  <h1>Bienvenido <%= current_user.name %></h1>
+  <%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete %>
+<% else %>
+  <h1>Bienvenido a SoundFinder</h1>
+  <%= link_to "Iniciar sesión", new_user_session_path %>
+<% end %>
