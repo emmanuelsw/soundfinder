@@ -1,0 +1,11 @@
+<h1>Listado de Sonidos</h1>
+
+<% @sounds.each do |sound| %>
+<div class="ui raised segment">
+  <%= sound.name %>
+  <br>
+  <audio src="<%= sound.sound_url %>" controls>
+    <p>Tu navegador no implementa el elemento audio.</p>
+  </audio>
+</div>
+<% end %>

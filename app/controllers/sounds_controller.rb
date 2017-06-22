@@ -2,6 +2,10 @@ class SoundsController < ApplicationController
 
   before_action :set_sound, only: [:show, :edit, :update, :destroy]
 
+  def index
+    @sounds = Sound.all
+  end
+
   def new
     @sound = Sound.new
   end
@@ -10,7 +14,7 @@ class SoundsController < ApplicationController
     @sound = current_user.sounds.new(sound_params)
 
     if @sound.save
-      redirect_to new_sound_url
+      redirect_to sounds_url
     else
       render :new
     end
