@@ -75,6 +75,7 @@ GEM
       railties (>= 4.1.0, < 5.2)
       responders
       warden (~> 1.2.3)
+    down (3.2.0)
     erubi (1.6.0)
     execjs (2.7.0)
     ffi (1.9.18)
@@ -154,6 +155,8 @@ GEM
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
       websocket (~> 1.0)
+    shrine (2.6.1)
+      down (>= 2.3.6)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -207,6 +210,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   selenium-webdriver
   semantic-ui-sass!
+  shrine
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
@@ -215,4 +219,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.14.6
+   1.15.1
