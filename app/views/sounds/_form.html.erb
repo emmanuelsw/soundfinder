@@ -1,0 +1,27 @@
+<%= form_with(model: @sound, local: true, class: 'ui form') do |form| %>
+
+  <% if @sound.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+        <% @sound.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name, "Nombre" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sound, "Archivo" %>
+    <%= form.hidden_field :sound, value: @sound.cached_sound_data %>
+    <%= form.file_field :sound %>
+  </div>
+
+  <div class="field">
+    <%= form.submit "Registrar", class: 'ui green button' %>
+  </div>
+<% end %>
