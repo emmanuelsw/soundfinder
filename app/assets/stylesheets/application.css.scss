@@ -18,28 +18,68 @@ $font-family: 'Helvetica Neue';
 @import "semantic-ui";
 @import "font-awesome";
 
-@font-face {
-  font-family: 'Title Menu';
-  src: url('title_menu.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+html, body {
+  height: auto !important;
 }
 
-.main.container {
-  margin-top: 80px;
+body {
+  padding-top: 68px;
 }
+
+/******* MISC ********/
 
 .right-space {
   margin-right: 15px !important;
 }
 
-.menu-title {
-  font-family: 'Title Menu';
-  font-size: 56px;
-  color: #2c3e50;
+.top-space {
+  padding-top: 20px;
+}
+
+/******** TOP NAVBAR ********/
+
+.main-header {
+  border-top: none !important;
+  background: #274555 !important;
+  box-shadow: 0px 0px 3px 2px #212121 !important;
 }
 
 .item-title {
-  padding-top: 6px !important;
-  padding-bottom: 3px !important;
+  padding: 0 !important;
+}
+
+.right.menu .item {
+  padding-right: 0 !important;
+}
+
+.item-title img {
+  padding: 12px 0 10px 0;
+  width: 3.8em !important;
+}
+
+
+/******** BANNER *********/
+
+.banner {
+  background-image: url('welcome-banner.jpg');
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  height: 350px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.banner * {
+  color: #fff;
+}
+
+.banner .welcome-title {
+  font-size: 50px;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
+.banner .welcome-subtitle {
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
 }

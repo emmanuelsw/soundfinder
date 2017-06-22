@@ -18,7 +18,9 @@
         <%= f.label :remember_me, "Recuerdame" %>
       </div>
     <% end -%>
+
     <br>
+
     <div class="actions">
       <%= f.button "Iniciar sesión", class: 'ui green button', data: { disable_with: "<i class='fa fa-spinner fa-spin'></i> Iniciando" } %>
     </div>
@@ -26,4 +28,3 @@
 
   <%= render "devise/shared/links" %>
 </div>
-

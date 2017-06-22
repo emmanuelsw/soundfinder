@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Sounds</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>SoundFinder</title>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'https://code.jquery.com/jquery-3.2.1.min.js' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'https://code.jquery.com/jquery-3.2.1.min.js' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<body>
+  <div class="main">
 
-  <body>
-  <div class="ui container">
-    <%= semantic_flash %>
+    <div class="ui top borderless fixed menu main-header">
+      <div class="ui container">
+
+        <a class="item item-title">
+          <%= image_tag "search.svg" %>
+        </a>
+
+        <div class="right menu">
+          <div class="item">
+            <% if user_signed_in? %>
+              <%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete, class: 'ui inverted button' %>
+            <% else %>
+              <%= link_to "Iniciar Sesión", new_user_session_path, class: 'ui green inverted button right-space' %>
+              <%= link_to "Registrarse", new_user_registration_path, class: 'ui inverted button' %>
+            <% end %>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <%= yield %>
+
   </div>
-
-  <%= yield %>
-  </body>
+</body>
 </html>

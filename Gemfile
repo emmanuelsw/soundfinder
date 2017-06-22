@@ -17,9 +17,6 @@ gem 'devise'
 gem 'semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git'
 gem "font-awesome-rails"
 
-# gem 'redis', '~> 3.0'
-# gem 'bcrypt', '~> 3.1.7'
-# gem 'capistrano-rails', group: :development
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
