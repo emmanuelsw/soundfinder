@@ -34,6 +34,27 @@
 
     <%= yield %>
 
+    <div class="ui vertical footer segment">
+      <div class="ui center aligned container">
+        <div class="ui horizontal divided list">
+
+          <div class="item">
+            <div class="ui teal large label">EmmanuelSW</div>
+          </div>
+
+          <div class="item">
+            <%= link_to "https://facebook.com/emmanuelsw", target: "_blank" do %>
+              <i class="inverted facebook big icon"></i>
+            <% end %>
+
+            <%= link_to "https://github.com/emmanuelsw", target: "_blank" do %>
+              <i class="inverted github big icon"></i>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </body>
 </html>
