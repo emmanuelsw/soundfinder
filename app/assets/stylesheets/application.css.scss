@@ -24,6 +24,13 @@ html, body {
 
 body {
   padding-top: 68px;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+.main {
+  width: 100%;
 }
 
 /******* MISC ********/
@@ -88,6 +95,8 @@ body {
 /******** FOOTER *********/
 
 .footer {
+  width: 100%;
+  align-self: flex-end;
   background: #274555 !important;
   margin: 2em 0em 0em !important;
 }

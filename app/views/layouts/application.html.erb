@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>SoundFinder</title>
+  <%= favicon_link_tag "favicon.png" %>
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'https://code.jquery.com/jquery-3.2.1.min.js' %>
@@ -34,26 +35,27 @@
 
     <%= yield %>
 
-    <div class="ui vertical footer segment">
-      <div class="ui center aligned container">
-        <div class="ui horizontal divided list">
+  </div>
 
-          <div class="item">
-            <div class="ui teal large label">EmmanuelSW</div>
-          </div>
+  <div class="ui vertical footer segment">
+    <div class="ui center aligned container">
+      <div class="ui horizontal divided list">
 
-          <div class="item">
-            <%= link_to "https://github.com/emmanuelsw", target: "_blank" do %>
-              <i class="inverted github big icon"></i>
-            <% end %>
-            <%= link_to "https://facebook.com/emmanuelsw", target: "_blank" do %>
-              <i class="inverted facebook big icon"></i>
-            <% end %>
-          </div>
+        <div class="item">
+          <div class="ui teal large label">EmmanuelSW</div>
+        </div>
+
+        <div class="item">
+          <%= link_to "https://github.com/emmanuelsw", target: "_blank" do %>
+            <i class="inverted github big icon"></i>
+          <% end %>
+          <%= link_to "https://facebook.com/emmanuelsw", target: "_blank" do %>
+            <i class="inverted facebook big icon"></i>
+          <% end %>
         </div>
       </div>
     </div>
-
   </div>
+
 </body>
 </html>
