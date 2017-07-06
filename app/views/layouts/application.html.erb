@@ -24,13 +24,15 @@
             <% if user_signed_in? %>
               <%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete, class: 'ui inverted button' %>
             <% else %>
-
               <div class="ui green inverted login button right-space">Iniciar Sesión</div>
               <div class="ui login popup transition hidden">
                 <%= render "devise/sessions/new" %>
               </div>
 
-              <%= button_tag "Registrarse", class: 'ui register inverted button' %>
+              <div class="ui register inverted button">Registrarse</div>
+              <div class="ui register popup transition hidden">
+                <%= render "devise/registrations/new" %>
+              </div>
             <% end %>
           </div>
         </div>
@@ -38,10 +40,13 @@
       </div>
     </div>
 
-    <%= yield %>
 
+    <%= yield %>
+    <div id="notice"></div>
+    <div id="alert"></div>
   </div>
 
+  <%# Footer %>
   <div class="ui vertical footer segment">
     <div class="ui center aligned container">
       <div class="ui horizontal divided list">

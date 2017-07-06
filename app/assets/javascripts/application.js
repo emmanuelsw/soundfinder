@@ -24,4 +24,13 @@ $(document).on("turbolinks:load", function() {
       position   : 'bottom right',
     })
   ;
+
+  $('.register.button')
+    .popup({
+      popup : $('.register.popup'),
+      on    : 'click',
+      inline     : true,
+      position   : 'bottom right',
+    })
+  ;
 });
