@@ -24,8 +24,13 @@
             <% if user_signed_in? %>
               <%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete, class: 'ui inverted button' %>
             <% else %>
-              <%= link_to "Iniciar Sesión", new_user_session_path, class: 'ui green inverted button right-space' %>
-              <%= link_to "Registrarse", new_user_registration_path, class: 'ui inverted button' %>
+
+              <div class="ui green inverted login button right-space">Iniciar Sesión</div>
+              <div class="ui login popup transition hidden">
+                <%= render "devise/sessions/new" %>
+              </div>
+
+              <%= button_tag "Registrarse", class: 'ui register inverted button' %>
             <% end %>
           </div>
         </div>

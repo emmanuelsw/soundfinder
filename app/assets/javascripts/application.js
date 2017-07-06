@@ -14,3 +14,14 @@
 //= require turbolinks
 //= require semantic-ui
 //= require_tree .
+
+$(document).on("turbolinks:load", function() {
+  $('.login.button')
+    .popup({
+      popup : $('.login.popup'),
+      on    : 'click',
+      inline     : true,
+      position   : 'bottom right',
+    })
+  ;
+});

@@ -1,0 +1,24 @@
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'ui form' }) do |f| %>
+<div class="field">
+  <%= f.label :email, "Email" %>
+  <%= f.email_field :email, autofocus: true %>
+</div>
+
+<div class="field">
+  <%= f.label :password, "Contraseña" %>
+  <%= f.password_field :password, autocomplete: "off" %>
+</div>
+
+<% if devise_mapping.rememberable? -%>
+<div class="inline-field">
+  <%= f.check_box :remember_me, style: "vertical-align: text-top;" %>
+  <%= f.label :remember_me, "Recuerdame" %>
+</div>
+<% end -%>
+
+<br>
+
+<div class="actions">
+  <%= f.button "Iniciar sesión", class: 'ui green button', data: { disable_with: "<i class='fa fa-circle-o-notch fa-spin'></i> &nbsp;Iniciando" } %>
+</div>
+<% end %>
