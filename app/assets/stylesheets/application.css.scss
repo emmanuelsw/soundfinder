@@ -35,6 +35,20 @@ body {
 
 /******* MISC ********/
 
+#toast-container {
+  top: 70px;
+}
+
+.toast-top-right {
+  top: 88px !important;
+}
+
+#toast-container > div {
+  opacity: 1 !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+
 .right-space {
   margin-right: 15px !important;
 }
