@@ -18,6 +18,17 @@ class RegistrationsController < Devise::RegistrationsController
     else
       clean_up_passwords resource
       set_minimum_password_length
+      respond_with_failed_signup resource
+    end
+  end
+
+  private
+  def respond_with_failed_signup(resource)
+    if resource.email == "" && resource.password == nil
+      redirect_to root_path, alert: "Debes llenar los campos del formulario."
+    elsif User.pluck(:email).include? resource.email
+      redirect_to root_path, alert: "Ups, este email ya se encuentra registrado."
+    else
       redirect_to root_path, alert: "Ups, algo salió mal en el registro."
     end
   end
