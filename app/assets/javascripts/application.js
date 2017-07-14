@@ -13,9 +13,12 @@
 //= require rails-ujs
 //= require turbolinks
 //= require semantic-ui
+//= require plyr
 //= require_tree .
 
 $(document).on("turbolinks:load", function() {
+
+  /* Login popup */
   $('.login.button')
     .popup({
       popup : $('.login.popup'),
@@ -25,6 +28,7 @@ $(document).on("turbolinks:load", function() {
     })
   ;
 
+  /* Register popup */
   $('.register.button')
     .popup({
       popup : $('.register.popup'),
@@ -33,6 +37,11 @@ $(document).on("turbolinks:load", function() {
       position   : 'bottom right',
     })
   ;
+
+  /* Audio element */
+  var players = plyr.setup({
+  });
+
 });
 
 toastr.options = {

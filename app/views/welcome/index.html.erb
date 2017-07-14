@@ -26,8 +26,9 @@
           <div class="ui raised segment">
             <%= sound.name %>
             <br>
-            <audio src="<%= sound.sound_url %>" controls>
-              <p>Tu navegador no implementa el elemento audio.</p>
+
+            <audio controls>
+              <source src="<%= sound.sound_url %>" type="audio/mp3">
             </audio>
 
           </div>

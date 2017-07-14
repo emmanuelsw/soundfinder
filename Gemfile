@@ -17,6 +17,7 @@ gem 'devise'
 gem 'semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git'
 gem "font-awesome-rails"
 gem "shrine"
+gem 'plyr-rails', :git => "https://github.com/emmanuelsw/plyr-rails"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
