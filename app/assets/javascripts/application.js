@@ -40,6 +40,7 @@ $(document).on("turbolinks:load", function() {
 
   /* Audio element */
   var players = plyr.setup({
+    controls: ['play', 'progress', 'current-time']
   });
 
 });

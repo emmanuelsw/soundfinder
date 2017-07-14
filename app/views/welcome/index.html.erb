@@ -24,8 +24,9 @@
       <% @sounds.each do |sound| %>
         <div class="eight wide column">
           <div class="ui raised segment">
-            <%= sound.name %>
-            <br>
+            <b><%= sound.name %></b> <br>
+            <i><%= sound.user.name %></i>
+            <br><br>
 
             <audio controls>
               <source src="<%= sound.sound_url %>" type="audio/mp3">
