@@ -78,6 +78,10 @@ body {
   width: 3.8em !important;
 }
 
+.login.popup, .register.popup {
+  width: 500px !important;
+}
+
 
 /******** BANNER *********/
 
@@ -113,8 +117,4 @@ body {
   align-self: flex-end;
   background: #274555 !important;
   margin: 2em 0em 0em !important;
-}
-
-.login.popup, .register.popup {
-  width: 500px !important;
 }
