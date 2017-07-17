@@ -16,8 +16,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git'
 gem "font-awesome-rails"
-gem "shrine"
+gem 'shrine'
 gem 'plyr-rails', :git => "https://github.com/emmanuelsw/plyr-rails"
+gem 'jquery-rails'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -31,5 +32,3 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
-
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
